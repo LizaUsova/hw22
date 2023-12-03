@@ -1,0 +1,23 @@
+@use './../../common/variables' as *;
+
+.privacy {
+  padding-top: 240px;
+  padding-bottom: 160px;
+  background-color: $color-light-gray;
+
+  .title-dark {
+    color: $color-dark;
+  }
+
+  &__content {
+    gap: 110px;
+  }
+
+  &__texts {
+    gap: 60px;
+  }
+
+  &__text {
+    gap: 35px   ;
+  }
+}

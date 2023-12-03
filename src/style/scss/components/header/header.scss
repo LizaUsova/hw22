@@ -10,6 +10,10 @@
 
   background-color: transparent;
 
+  &.text-dark &__menu a{
+      color: $color-dark;
+  }
+
   &__navigation {
     align-items: center;
   }

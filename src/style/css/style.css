@@ -196,6 +196,8 @@ a {
   left: 0;
   padding: 25px 0;
   background-color: transparent; }
+  .header.text-dark .header__menu a {
+    color: #000; }
   .header__navigation {
     align-items: center; }
   .header__menu {
@@ -322,49 +324,6 @@ a {
     gap: 100px;
     justify-content: flex-end;
     margin: 0 0 0 auto; }
-
-@use './../../common/variables' as *;
-@use './../../common/mixins' as *;
-footer {
-  background-color: #343434; }
-  footer .footer {
-    padding: 105px 0; }
-    footer .footer__left {
-      max-width: 363px; }
-    footer .footer__description {
-      font-size: 12px;
-      padding-top: 30px;
-      color: #fff; }
-    footer .footer__right {
-      gap: 30px; }
-      footer .footer__right-content {
-        gap: 30px;
-        justify-content: flex-start; }
-      footer .footer__right p {
-        padding-bottom: 10px;
-        color: #909090; }
-    footer .footer .link-instagram {
-      padding-top: 10px; }
-
-@use './../../common/variables' as *;
-.header {
-  position: absolute;
-  z-index: 3;
-  right: 0;
-  left: 0;
-  padding: 25px 0;
-  background-color: transparent; }
-  .header__navigation {
-    align-items: center; }
-  .header__menu {
-    gap: 80px;
-    align-items: center; }
-    .header__menu_list {
-      gap: 60px; }
-    .header__menu_link {
-      font-family: "Poppins-light", sans-serif;
-      font-size: 20px;
-      color: #fff; }
 
 @use './../../common/variables' as *;
 @use './../../common/mixins' as *;
