@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Убираем внутренние отступы, удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class */
+ul[class],
+ol[class] {
+  padding: 0;
+  text-decoration: none;
+  list-style: none; }
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizespeed; }
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Упрощаем работу с изображениями */
+img {
+  display: block;
+  max-width: 100%; }
+
+/* Указываем понятную периодичность в потоке данных у article */
+article > * + * {
+  margin-top: 1em; }
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+/* @media (prefers-reduced-motion: reduce) { */
+/*    * { */
+/*        animation-duration: 0.01ms !important; */
+/*        animation-iteration-count: 1 !important; */
+/*        transition-duration: 0.01ms !important; */
+/*        scroll-behavior: auto !important; */
+/*    } */
+/* } */
+@font-face {
+  font-family: Inter;
+  font-weight: 400;
+  font-style: normal;
+  src: local("./../../assets/fonts/Inter Regular"), local("Inter-Regular"), url("./../../assets/fonts/Inter-Regular.woff2") format("woff2"), url("./../../assets/fonts/Inter-Regular.woff") format("woff"), url("./../../assets/fonts/Inter-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Itim;
+  font-weight: 400;
+  font-style: normal;
+  src: local("./../../assets/fonts/Itim Regular"), local("Itim-Regular"), url("./../../assets/fonts/Itim-Regular.woff2") format("woff2"), url("./../../assets/fonts/Itim-Regular.woff") format("woff"), url("./../../assets/fonts/Itim-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Poppins-regular;
+  font-weight: 400;
+  font-style: normal;
+  src: local("./../../assets/fonts/Poppins Regular"), local("Poppins-Regular"), url("./../../assets/fonts/Poppins-Regular.woff2") format("woff2"), url("./../../assets/fonts/Poppins-Regular.woff") format("woff"), url("./../../assets/fonts/Poppins-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: Poppins-light;
+  font-weight: 300;
+  font-style: normal;
+  src: local("./../../assets/fonts/Poppins Light"), local("Poppins-Light"), url("./../../assets/fonts/Poppins-Light.woff2") format("woff2"), url("./../../assets/fonts/Poppins-Light.woff") format("woff"), url("./../../assets/fonts/Poppins-Light.ttf") format("truetype"); }
+@font-face {
+  font-family: Poppins-medium;
+  font-weight: 500;
+  font-style: normal;
+  src: local("Poppins Medium"), local("Poppins-Medium"), url("./../../assets/fonts/Poppins-Medium.woff2") format("woff2"), url("./../../assets/fonts/Poppins-Medium.woff") format("woff"), url("./../../assets/fonts/Poppins-Medium.ttf") format("truetype"); }
+@font-face {
+  font-family: Poppins-semi-bold;
+  font-weight: 600;
+  font-style: normal;
+  src: local("Poppins Semi Bold"), local("Poppins-Semi-Bold"), url("./../../assets/fonts/Poppins-SemiBold.woff2") format("woff2"), url("./../../assets/fonts/Poppins-SemiBold.woff") format("woff"), url("./../../assets/fonts/Poppins-SemiBold.ttf") format("truetype"); }
+@use './../common/variables' as *;
+h2, h3, h4 {
+  font-family: "Poppins-medium", sans-serif;
+  color: #000; }
+
+footer .footer__description {
+  font-family: "Poppins-regular", sans-serif;
+  line-height: 1.4;
+  color: #000; }
+
+@use './../common/extends' as *;
+@use './../common/variables' as *;
+@use './../common/mixins' as *;
+body {
+  margin: 0 auto;
+  font-family: "Poppins-regular", sans-serif;
+  font-size: 18px; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; }
+
+.d-flex-wrap {
+  display: flex;
+  flex-wrap: wrap; }
+
+.space-between {
+  justify-content: space-between; }
+
+h1 {
+  padding-bottom: 40px;
+  font-family: "Poppins-medium", sans-serif;
+  font-size: 70px;
+  color: #fff; }
+
+h2 {
+  font-size: 70px; }
+
+h3 {
+  font-size: 45px; }
+
+h4 {
+  font-size: 35px; }
+
+h5 {
+  display: inline-block;
+  font-family: "Poppins-semi-bold", sans-serif;
+  font-size: 22px;
+  color: #000; }
+
+.btn {
+  cursor: pointer;
+  padding: 12px 60px;
+  font-family: "Poppins-regular", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background: #2EACF3;
+  border: 2px solid transparent;
+  border-radius: 6px 28px 6px 28px; }
+  .btn_header {
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 6px; }
+  .btn:hover {
+    border-color: #9EE9EE;
+    transition: 0.3s; }
+
+a {
+  color: #fff;
+  text-decoration: none; }
+  a:hover {
+    cursor: pointer;
+    color: #2EACF3;
+    transition: 0.3s; }
+
+.label1 {
+  font-family: "Poppins-light", sans-serif;
+  font-size: 14px; }
+
+.label {
+  color: #fff; }
+
+.label1 a, .label a {
+  color: #2EACF3; }
+  .label1 a:hover, .label a:hover {
+    color: #2EACF3; }
+
+@use './../../common/variables' as *;
+.header {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+  padding: 25px 0;
+  background-color: transparent; }
+  .header.text-dark .header__menu a {
+    color: #000; }
+  .header__navigation {
+    align-items: center; }
+  .header__menu {
+    gap: 80px;
+    align-items: center; }
+    .header__menu_list {
+      gap: 60px; }
+    .header__menu_link {
+      font-family: "Poppins-light", sans-serif;
+      font-size: 20px;
+      color: #fff; }
+
+@use './../../common/variables' as *;
+.privacy {
+  padding-top: 240px;
+  padding-bottom: 160px;
+  background-color: #F4F4FA; }
+  .privacy .title-dark {
+    color: #000; }
+  .privacy__content {
+    gap: 110px; }
+  .privacy__texts {
+    gap: 60px; }
+  .privacy__text {
+    gap: 35px; }
+
+@use './../../common/variables' as *;
+@use './../../common/mixins' as *;
+footer {
+  background-color: #343434; }
+  footer .footer {
+    padding: 105px 0; }
+    footer .footer__left {
+      max-width: 363px; }
+    footer .footer__description {
+      font-size: 12px;
+      padding-top: 30px;
+      color: #fff; }
+    footer .footer__right {
+      gap: 30px; }
+      footer .footer__right-content {
+        gap: 30px;
+        justify-content: flex-start; }
+      footer .footer__right p {
+        padding-bottom: 10px;
+        color: #909090; }
+    footer .footer .link-instagram {
+      padding-top: 10px; }
+
+/*# sourceMappingURL=privacy-policy.css.map */
