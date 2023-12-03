@@ -1,0 +1,31 @@
+@use './../../common/variables' as *;
+
+.header {
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  left: 0;
+
+  padding: 25px 0;
+
+  background-color: transparent;
+
+  &__navigation {
+    align-items: center;
+  }
+
+  &__menu {
+    gap: 80px;
+    align-items: center;
+
+    &_list {
+      gap: 60px;
+    }
+
+    &_link {
+      font-family: $f-poppins-light;
+      font-size: $f-lg;
+      color: $color-light;
+    }
+  }
+}

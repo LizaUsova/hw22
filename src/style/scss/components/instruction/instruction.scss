@@ -1,0 +1,66 @@
+@use './../../common/variables' as *;
+@use './../../common/mixins' as *;
+
+.instruction {
+  background-color: $color-light-gray;
+
+  &__inner {
+    gap: 80px;
+    padding-top: 140px;
+    padding-bottom: 160px;
+  }
+
+  &__cards {
+    gap: 40px;
+  }
+
+  &__card {
+    max-width: 363px;
+    min-height: 332px;
+    padding: 35px 65px 45px 30px;
+
+    background-color: $color-light;
+    border: 1px solid $color-light;
+    border-radius: $border-r-sm $border-r-xl $border-r-sm $border-r-sm;
+
+    &-icon {
+      padding: 16px 19px;
+      background-color: $color-light-blue;
+      border-radius: $border-r-sm;
+
+      &_purple {
+        padding: 18px;
+        background-color: $color-purple;
+        border-radius: $border-r-sm;
+      }
+    }
+
+    &-row {
+      gap: 15px;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &-number {
+      font-family: $f-poppins-semi-bold;
+      font-size: $f-lg;
+      color: $color-dark-blue;
+
+      &_purple {
+        font-family: $f-poppins-semi-bold;
+        font-size:$f-lg;
+        color: $color-purple;
+      }
+    }
+
+    &-description {
+      @include text-base(18px)
+    }
+  }
+
+  &__clicking {
+    gap: 100px;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+  }
+}

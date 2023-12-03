@@ -1,0 +1,18 @@
+@use './../common/variables' as *;
+
+%titles {
+  font-family: $f-poppins-medium;
+  color: $color-dark;
+}
+
+%text-main {
+  font-family: $f-poppins-regular;
+  line-height: 1.4;
+  color: $color-dark;
+}
+
+%image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}

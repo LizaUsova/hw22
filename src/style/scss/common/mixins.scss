@@ -1,0 +1,13 @@
+@use './../common/extends' as *;
+
+@mixin title($font-size) {
+  @extend %titles;
+
+  font-size: $font-size;
+}
+
+@mixin text-base($font-size) {
+  @extend %text-main;
+
+  font-size: $font-size;
+}

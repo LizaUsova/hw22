@@ -1,0 +1,36 @@
+// family-fonts
+$s-serif: sans-serif;
+$f-inter: inter, $s-serif;
+$f-itim: 'Itim', $s-serif;
+$f-poppins-light: 'Poppins-light', $s-serif;
+$f-poppins-regular: 'Poppins-regular', $s-serif;
+$f-poppins-medium: 'Poppins-medium', $s-serif;
+$f-poppins-semi-bold: 'Poppins-semi-bold', $s-serif;
+
+// font-sizes
+$f-xs: 12px;
+$f-sm: 14px;
+$f-md: 16px;
+$f-ml: 18px;
+$f-lg: 20px;
+$f-xl: 22px;
+
+// colors
+$color-dark: #000;
+$color-light: #fff;
+$color-dark-gray: #343434;
+$color-light-gray: #F4F4FA;
+$color-light-blue: #9EE9EE;
+$color-dark-blue: #2EACF3;
+$color-purple: #8E85F4;
+
+// container
+$content-width: 1170px;
+$container-offset: 15px;
+$container-width: $content-width + $container-offset * 2;
+
+// Properties
+$border-r-sm: 6px;
+$border-r-md: 28px;
+$border-r-lg: 52px;
+$border-r-xl: 100px;

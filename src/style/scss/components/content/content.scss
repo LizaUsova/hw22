@@ -1,0 +1,71 @@
+@use './../../common/variables' as *;
+@use './../../common/extends' as *;
+
+.content {
+  padding-top: 140px;
+  padding-bottom: 100px;
+
+  .content-block {
+    gap: 60px;
+
+    &__left {
+      flex-direction: column;
+      gap: 50px;
+      justify-content: flex-start;
+      max-width: 400px;
+
+      a {
+        color: $color-dark-blue;
+      }
+    }
+
+    &__right {
+      gap: 30px;
+    }
+
+    &__graphic {
+      @extend %image;
+
+      width: 460px;
+      max-width: 100%;
+      height: 365px;
+      background-image: url("./../../assets/pictures/img/infographic.png");
+    }
+
+    &__values {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 200px;
+    }
+
+    &__values-description {
+      font-size: $f-md;
+      color: $color-dark;
+    }
+
+    &__values-title {
+      font-family: $f-poppins-semi-bold;
+      font-size: 18px;
+      color: $color-dark;
+    }
+
+    &__values-rows {
+      flex-direction: column;
+      gap: 20px;
+
+      .row {
+        display: flex;
+        font-size: $f-md;
+
+        &:not(:last-child) {
+          border-bottom: 1px solid $color-dark;
+        }
+
+        &__numbers {
+          font-size: $f-ml;
+        }
+      }
+    }
+  }
+}

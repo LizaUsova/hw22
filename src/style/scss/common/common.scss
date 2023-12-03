@@ -1,0 +1,104 @@
+@use './../common/variables' as *;
+@use './../common/mixins' as *;
+
+body {
+  margin: 0 auto;
+  font-family: $f-poppins-regular;
+  font-size: $f-ml;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 $container-offset;
+}
+
+.d-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+h1 {
+  padding-bottom: 40px;
+  font-family: $f-poppins-medium;
+  font-size: 70px;
+  color: $color-light;
+}
+
+h2 {
+  @include title(70px)
+}
+
+h3 {
+  @include title(45px)
+}
+
+h4 {
+  @include title(35px)
+}
+
+h5 {
+  display: inline-block;
+  font-family: $f-poppins-semi-bold;
+  font-size: $f-xl;
+  color: $color-dark;
+}
+
+.btn {
+  cursor: pointer;
+
+  padding: 12px 60px;
+
+  font-family: $f-poppins-regular;
+  font-size: $f-lg;
+  color: $color-light;
+
+  background: $color-dark-blue;
+  border: 2px solid transparent;
+  border-radius: $border-r-sm $border-r-md $border-r-sm $border-r-md;
+
+  &_header {
+    padding: 12px 18px;
+    font-size: $f-md;
+    border-radius: $border-r-sm;
+  }
+
+  &:hover {
+    border-color: $color-light-blue;
+    transition: 0.3s;
+  }
+}
+
+a {
+  color: $color-light;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-dark-blue;
+    transition: 0.3s;
+  }
+}
+
+.label1 {
+  font-family: $f-poppins-light;
+  font-size: $f-sm;
+}
+
+.label {
+  color: #fff;
+}
+
+.label1, .label {
+  a {
+    color: $color-dark-blue;
+
+    &:hover {
+      color: $color-dark-blue;
+    }
+  }
+}

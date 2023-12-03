@@ -1,0 +1,40 @@
+@use './../../common/variables' as *;
+
+.promo {
+  position: relative;
+
+  min-height: 800px;
+  padding-top: 220px;
+  padding-bottom: 195px;
+
+  background-image: url("./../../assets/pictures/img/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 723px;
+    right: 200px;
+
+    display: block;
+
+    width: 400px;
+    height: 140px;
+
+    background-image: url("./../../assets/pictures/icons_svg/dot_ornament.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__title {
+    gap: 40px;
+    max-width: 620px;
+  }
+
+  &__inner {
+    position: absolute;
+  }
+}

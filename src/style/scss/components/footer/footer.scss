@@ -1,0 +1,39 @@
+@use './../../common/variables' as *;
+@use './../../common/mixins' as *;
+
+footer {
+  background-color: $color-dark-gray;
+
+  .footer {
+    padding: 105px 0;
+
+    &__left {
+      max-width: 363px;
+    }
+
+    &__description {
+      @include text-base(12px);
+
+      padding-top: 30px;
+      color: $color-light;
+    }
+
+    &__right {
+      gap:30px;
+
+      &-content {
+        gap:30px;
+        justify-content: flex-start;
+      }
+
+      p {
+        padding-bottom: 10px;
+        color: #909090;
+      }
+    }
+
+    .link-instagram {
+      padding-top: 10px;
+    }
+  }
+}
