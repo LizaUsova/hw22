@@ -84,6 +84,10 @@ a {
   }
 }
 
+form {
+  max-width: 500px;
+}
+
 .label1 {
   font-family: $f-poppins-light;
   font-size: $f-sm;

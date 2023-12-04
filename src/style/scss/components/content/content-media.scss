@@ -1,0 +1,15 @@
+@use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
+
+.promo {
+  @include hd-screen($br1) {
+    .content {
+      &content-block {
+        &__left {
+          min-width: 954px;
+          background-color: red;
+        }
+      }
+    }
+  }
+}

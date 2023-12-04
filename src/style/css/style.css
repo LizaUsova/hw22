@@ -176,6 +176,9 @@ a {
     color: #2EACF3;
     transition: 0.3s; }
 
+form {
+  max-width: 500px; }
+
 .label1 {
   font-family: "Poppins-light", sans-serif;
   font-size: 14px; }
@@ -188,6 +191,7 @@ a {
   .label1 a:hover, .label a:hover {
     color: #2EACF3; }
 
+@use './variables' as *;
 @use './../../common/variables' as *;
 .header {
   position: absolute;
@@ -209,6 +213,21 @@ a {
       font-family: "Poppins-light", sans-serif;
       font-size: 20px;
       color: #fff; }
+
+@use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
+@media (max-width: 576px) {
+  .header__navigation {
+    flex-direction: column;
+    align-items: stretch; } }
+@media (max-width: 480px) {
+  .header__navigation {
+    flex-flow: column nowrap;
+    align-items: stretch; }
+  .header__menu {
+    gap: 50px; }
+    .header__menu_list {
+      gap: 37px; } }
 
 @use './../../common/variables' as *;
 .promo {
@@ -236,6 +255,15 @@ a {
     max-width: 620px; }
   .promo__inner {
     position: absolute; }
+
+@use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
+@media (max-width: 576px) {
+  .promo__title h1 {
+    font-size: 60px; } }
+@media (max-width: 480px) {
+  .promo__title h1 {
+    font-size: 50px; } }
 
 @use './../../common/variables' as *;
 @use './../../common/extends' as *;
@@ -281,6 +309,13 @@ a {
         .content .content-block__values-rows .row__numbers {
           font-size: 18px; }
 
+@use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
+@media (max-width: 1280px) {
+  .promo .contentcontent-block__left {
+    min-width: 954px;
+    background-color: red; } }
+
 @use './../../common/variables' as *;
 @use './../../common/mixins' as *;
 .instruction {
@@ -325,6 +360,7 @@ a {
     justify-content: flex-end;
     margin: 0 0 0 auto; }
 
+@use './../../common/media-mixin' as *;
 @use './../../common/variables' as *;
 @use './../../common/mixins' as *;
 footer {
@@ -347,5 +383,7 @@ footer {
         color: #909090; }
     footer .footer .link-instagram {
       padding-top: 10px; }
+
+@use './../../common/media-mixin' as *;
 
 /*# sourceMappingURL=style.css.map */

@@ -29,8 +29,17 @@ $content-width: 1170px;
 $container-offset: 15px;
 $container-width: $content-width + $container-offset * 2;
 
-// Properties
+// properties
 $border-r-sm: 6px;
 $border-r-md: 28px;
 $border-r-lg: 52px;
 $border-r-xl: 100px;
+
+// base breakpoints
+$full-hd: 1920px;
+$hd: 1280px;
+$br1: 992px;
+$br2: 767px;
+$br3: 576px;
+$br4: 480px;
+$br5: 320px;
