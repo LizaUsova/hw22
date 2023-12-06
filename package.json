@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss-compile-home-page": "sass --watch ./src/style/scss/pages/home-page.scss:./src/style/css/style.css",
-    "scss-compile-privacy-policy": "sass --watch ./src/style/scss/pages/privacy-policy.scss:./src/style/css/privacy-policy.css"
+    "scss-compile-all": "sass --watch ./src/style/scss/index.scss:./src/style/css/style.css",
+    "scss-compile-home-page": "sass --watch ./src/style/scss/home-page.scss:./src/style/css/home-page.css",
+    "scss-compile-privacy-policy": "sass --watch ./src/style/scss/privacy-policy.scss:./src/style/css/privacy-policy.css"
   },
   "author": "",
   "license": "ISC",

@@ -1,15 +1,97 @@
 @use './../../common/media-mixin' as *;
 @use './../../common/variables' as *;
 
-.promo {
-  @include hd-screen($br1) {
-    .content {
-      &content-block {
-        &__left {
-          min-width: 954px;
-          background-color: red;
-        }
+.content {
+
+  @include br1-screen {
+    padding-top: 90px;
+
+    .content-block {
+      &__left {
+        gap: 30px;
+        min-width: 954px;
+      }
+
+      &__right {
+        gap: 140px;
+      }
+
+      &__graphic {
+        width: 500px;
+      }
+    }
+  }
+
+  @include br2-screen {
+    padding-top: 90px;
+
+    .content-block {
+      &__left {
+        gap: 30px;
+        min-width: 730px;
+      }
+
+      &__right {
+        gap: 90px;
+      }
+
+      &__graphic {
+        width: 400px;
+      }
+    }
+  }
+
+  @include br3-screen {
+    padding-top: 90px;
+    padding-bottom: 1px;
+
+    .content-block {
+      &__left {
+        gap: 30px;
+        min-width: 520px;
+      }
+
+      &__right {
+        gap: 15px;
+      }
+
+      &__graphic {
+        width: 300px;
+      }
+
+      &__values {
+        gap: 10px;
+      }
+    }
+  }
+
+  @include br4-screen {
+    padding-top: 120px;
+    padding-bottom: 50px;
+
+    .content-block {
+      &__left {
+        gap: 30px;
+        min-width: 450px;
+      }
+
+      &__right {
+        gap: 40px;
+      }
+
+      &__graphic {
+        width: 450px;
+      }
+
+      &__values {
+        gap: 40px;
+      }
+
+      .row {
+        gap: 220px;
       }
     }
   }
 }
+
+

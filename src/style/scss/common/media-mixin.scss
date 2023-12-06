@@ -1,43 +1,37 @@
 @use './variables' as *;
 
-@mixin full-hd-screen($min-width) {
+@mixin full-hd-screen() {
   @media (max-width: $full-hd) {
     @content;
   }
 }
 
-@mixin hd-screen($min-width) {
+@mixin hd-screen() {
   @media (max-width: $hd) {
     @content;
   }
 }
 
-@mixin br1-screen($min-width) {
+@mixin br1-screen() {
   @media (max-width: $br1) {
     @content;
   }
 }
 
-@mixin br2-screen($min-width) {
+@mixin br2-screen() {
   @media (max-width: $br2) {
     @content;
   }
 }
 
-@mixin br3-screen($min-width) {
+@mixin br3-screen() {
   @media (max-width: $br3) {
     @content;
   }
 }
 
-@mixin br4-screen($min-width) {
+@mixin br4-screen() {
   @media (max-width: $br4) {
-    @content;
-  }
-}
-
-@mixin br5-screen($min-width) {
-  @media (max-width: $br5) {
     @content;
   }
 }

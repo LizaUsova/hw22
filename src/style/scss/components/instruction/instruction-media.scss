@@ -1,2 +1,86 @@
 @use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
 
+.instruction {
+
+  @include br1-screen {
+    &__inner {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+    
+    &__card {
+      max-width: 290px;
+      padding-right: 35px;
+      padding-left: 35px;
+    }
+  }
+
+  @include br2-screen {
+    &__inner {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    &__card {
+      max-width: 775px;
+      min-height: 250px;
+      padding-right: 35px;
+      padding-left: 35px;
+
+      &-icons {
+        flex-direction: row;
+        gap: 72px;
+        align-items: center;
+      }
+    }
+  }
+
+  @include br3-screen {
+    &__inner {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    &__card {
+      max-width: 775px;
+      min-height: 250px;
+      padding-right: 35px;
+      padding-left: 35px;
+
+      &-icons {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+
+    &__clicking {
+      gap: 40px;
+    }
+  }
+
+  @include br4-screen {
+    &__inner {
+      padding-top: 100px;
+      padding-bottom: 120px;
+    }
+
+    &__card {
+      max-width: 775px;
+      min-height: 250px;
+      padding-right: 25px;
+      padding-left: 25px;
+
+      &-icons {
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+      }
+    }
+
+    &__clicking {
+      gap: 40px;
+    }
+  }
+}

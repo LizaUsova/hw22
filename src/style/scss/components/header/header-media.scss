@@ -3,20 +3,20 @@
 
 .header {
 
-  @include br3-screen($br4) {
+  @include br3-screen {
     &__navigation {
       flex-direction: column;
       align-items: stretch;
     }
   }
 
-  @include br4-screen($br5) {
-    &__navigation {
-      flex-flow: column nowrap;
-      align-items: stretch;
-    }
+  @include br4-screen {
+      &__navigation {
+        flex-flow: column nowrap;
+        align-items: stretch;
+      }
 
-    &__menu {
+      &__menu {
         gap: 50px;
 
         &_list {
@@ -25,3 +25,4 @@
       }
     }
   }
+

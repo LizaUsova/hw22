@@ -26,22 +26,18 @@ h1 {
   padding-bottom: 40px;
   font-family: $f-poppins-medium;
   font-size: 70px;
-  color: $color-light;
+  color: $color-dark;
 }
 
 h2 {
-  @include title(70px)
-}
-
-h3 {
   @include title(45px)
 }
 
-h4 {
+h3 {
   @include title(35px)
 }
 
-h5 {
+h4 {
   display: inline-block;
   font-family: $f-poppins-semi-bold;
   font-size: $f-xl;
@@ -86,15 +82,6 @@ a {
 
 form {
   max-width: 500px;
-}
-
-.label1 {
-  font-family: $f-poppins-light;
-  font-size: $f-sm;
-}
-
-.label {
-  color: #fff;
 }
 
 .label1, .label {

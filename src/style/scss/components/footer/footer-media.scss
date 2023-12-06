@@ -1,2 +1,29 @@
 @use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
 
+footer {
+
+  @include br2-screen {
+    .footer {
+      padding: 50px 0;
+
+      &__left {
+        max-width: 250px;
+      }
+    }
+  }
+
+  @include br3-screen {
+    .footer {
+      padding: 50px 0;
+
+      &__left {
+        max-width: 500px;
+      }
+
+      &__right {
+        margin-top: 40px;
+      }
+    }
+  }
+}

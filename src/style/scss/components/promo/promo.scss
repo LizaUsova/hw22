@@ -32,9 +32,17 @@
   &__title {
     gap: 40px;
     max-width: 620px;
+
+    h1 {
+      color: $color-light;
+    }
   }
 
   &__inner {
     position: absolute;
+  }
+
+  .label {
+    color: #fff;
   }
 }
