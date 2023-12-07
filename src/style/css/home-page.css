@@ -218,12 +218,6 @@ form {
     gap: 50px; }
     .header__menu_list {
       gap: 37px; } }
-@media (max-width: 320px) {
-  .header__menu {
-    gap: 25px;
-    align-items: stretch;
-    justify-content: center;
-    padding-top: 20px; } }
 
 @use './../../common/variables' as *;
 .promo {
@@ -238,8 +232,9 @@ form {
   .promo::after {
     content: '';
     position: absolute;
-    top: 723px;
+    top: calc(100vh - 65px);
     right: 200px;
+    bottom: 0;
     display: block;
     width: 400px;
     height: 140px;
@@ -258,18 +253,16 @@ form {
 
 @use './../../common/media-mixin' as *;
 @use './../../common/variables' as *;
+@media (max-width: 992px) {
+  .promo::after {
+    top: 723px;
+    right: 0; } }
 @media (max-width: 576px) {
   .promo__title h1 {
     font-size: 60px; } }
 @media (max-width: 480px) {
   .promo__title h1 {
     font-size: 50px; } }
-@media (max-width: 320px) {
-  .promo__title h1 {
-    padding-bottom: 0;
-    font-size: 33px; }
-  .promo .label {
-    font-size: 14px; } }
 
 @use './../../common/variables' as *;
 @use './../../common/extends' as *;
@@ -456,6 +449,21 @@ form {
       align-items: center; }
   .instruction__clicking {
     gap: 40px; } }
+@media (max-width: 480px) {
+  .instruction__inner {
+    padding-top: 100px;
+    padding-bottom: 120px; }
+  .instruction__card {
+    max-width: 775px;
+    min-height: 250px;
+    padding-right: 25px;
+    padding-left: 25px; }
+    .instruction__card-icons {
+      flex-direction: row;
+      gap: 20px;
+      align-items: center; }
+  .instruction__clicking {
+    gap: 40px; } }
 
 @use './../../common/variables' as *;
 @use './../../common/mixins' as *;
@@ -481,5 +489,18 @@ footer {
       padding-top: 10px; }
 
 @use './../../common/media-mixin' as *;
+@use './../../common/variables' as *;
+@media (max-width: 767px) {
+  footer .footer {
+    padding: 50px 0; }
+    footer .footer__left {
+      max-width: 250px; } }
+@media (max-width: 576px) {
+  footer .footer {
+    padding: 50px 0; }
+    footer .footer__left {
+      max-width: 500px; }
+    footer .footer__right {
+      margin-top: 40px; } }
 
 /*# sourceMappingURL=home-page.css.map */

@@ -16,8 +16,9 @@
     content: '';
 
     position: absolute;
-    top: 723px;
+    top: calc(100vh - 65px);
     right: 200px;
+    bottom: 0;
 
     display: block;
 
