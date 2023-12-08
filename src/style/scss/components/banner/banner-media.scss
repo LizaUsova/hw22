@@ -1,7 +1,7 @@
 @use './../../common/media-mixin' as *;
 @use './../../common/variables' as *;
 
-.promo {
+.banner {
 
   @include br1-screen {
     &__inner {
