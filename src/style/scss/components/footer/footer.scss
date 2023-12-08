@@ -1,20 +1,18 @@
 @use './../../common/variables' as *;
 @use './../../common/mixins' as *;
 
-footer {
+.footer {
+  padding: 100px 0;
   background-color: $color-dark-gray;
 
-  .footer {
-    padding: 105px 0;
-
     &__left {
+      gap: 30px;
       max-width: 363px;
     }
 
     &__description {
       @include text-base(12px);
-
-      padding-top: 30px;
+      
       color: $color-light;
     }
 
@@ -36,4 +34,3 @@ footer {
       padding-top: 10px;
     }
   }
-}

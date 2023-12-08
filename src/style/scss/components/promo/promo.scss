@@ -3,44 +3,39 @@
 .promo {
   position: relative;
 
-  min-height: 800px;
-  padding-top: 220px;
+  height: 100vh;
+  padding-top: 120px;
   padding-bottom: 195px;
 
-  background-image: url("./../../assets/pictures/img/bg.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  @include images ("./../../assets/pictures/img/bg.jpg");
 
   &::after {
     content: '';
 
     position: absolute;
-    top: calc(100vh - 65px);
-    right: 200px;
-    bottom: 0;
+    top: calc(100vh - 78px);
+    right: 0;
+    z-index: 2;
 
     display: block;
 
     width: 400px;
-    height: 140px;
+    height: 153px;
 
-    background-image: url("./../../assets/pictures/icons_svg/dot_ornament.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    @include images ("./../../assets/pictures/icons_svg/dot_ornament.svg");
   }
 
   &__title {
-    gap: 40px;
-    max-width: 620px;
+    gap: 30px;
 
     h1 {
+      margin-bottom: 70px;
       color: $color-light;
     }
   }
 
   &__inner {
-    position: absolute;
+    max-width: 620px;
   }
 
   .label {

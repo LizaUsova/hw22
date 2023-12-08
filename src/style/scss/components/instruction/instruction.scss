@@ -2,12 +2,13 @@
 @use './../../common/mixins' as *;
 
 .instruction {
+  gap: 80px;
+  padding-top: 140px;
+  padding-bottom: 160px;
   background-color: $color-light-gray;
-
+  
   &__inner {
     gap: 80px;
-    padding-top: 140px;
-    padding-bottom: 160px;
   }
 
   &__cards {
@@ -27,6 +28,7 @@
       flex-direction: column;
       gap: 25px;
     }
+
     &-icon {
       padding: 16px 19px;
       background-color: $color-light-blue;

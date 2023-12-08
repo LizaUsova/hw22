@@ -3,11 +3,32 @@
 
 .privacy {
 
+  @include br2-screen {
+    padding-bottom: 90px;
+
+    &__content {
+      gap: 50px
+    }
+
+    h1 {
+      padding-bottom: 0;
+      font-size: 60px;
+    }
+
+    h2 {
+      font-size: 32px;
+    }
+  }
+
   @include br3-screen {
     padding-bottom: 90px;
 
     &__content {
       gap: 50px
+    }
+
+    h2 {
+      max-width: 350px;
     }
   }
 
@@ -20,7 +41,7 @@
     }
 
     h2 {
-      font-size: 32px;
+      font-size: 28px;
     }
 
     &__texts {
@@ -28,7 +49,7 @@
     }
 
     &__content {
-      gap: 50px
+      gap: 60px
     }
   }
 }

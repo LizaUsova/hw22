@@ -1,23 +1,22 @@
 @use './../../common/media-mixin' as *;
 @use './../../common/variables' as *;
 
-footer {
+.footer {
 
   @include br2-screen {
-    .footer {
       padding: 50px 0;
-
+    
       &__left {
+        gap: 30px;
         max-width: 250px;
       }
     }
-  }
 
   @include br3-screen {
-    .footer {
       padding: 50px 0;
 
       &__left {
+        gap: 30px;
         max-width: 500px;
       }
 
@@ -25,5 +24,4 @@ footer {
         margin-top: 40px;
       }
     }
-  }
 }

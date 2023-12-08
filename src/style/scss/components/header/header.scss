@@ -2,7 +2,7 @@
 
 .header {
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   right: 0;
   left: 0;
 
@@ -12,6 +12,12 @@
 
   &.text-dark &__menu a{
       color: $color-dark;
+
+    &:hover {
+      cursor: pointer;
+      color: $color-dark-blue;
+      transition: 0.3s;
+    }
   }
 
   &__navigation {

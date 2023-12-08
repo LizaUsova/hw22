@@ -11,3 +11,10 @@
 
   font-size: $font-size;
 }
+
+@mixin images($img-url) {
+  @extend %image;
+
+  background-image: url($img-url);
+}
+

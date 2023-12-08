@@ -7,6 +7,8 @@
     padding-top: 90px;
 
     .content-block {
+      justify-content: center;
+
       &__left {
         gap: 30px;
         min-width: 954px;
@@ -43,7 +45,7 @@
 
   @include br3-screen {
     padding-top: 90px;
-    padding-bottom: 1px;
+    padding-bottom: 80px;
 
     .content-block {
       &__left {
@@ -52,15 +54,22 @@
       }
 
       &__right {
-        gap: 15px;
+        gap: 60px;
+        justify-content: center;
       }
 
       &__graphic {
-        width: 300px;
+        width: 500px;
       }
 
       &__values {
         gap: 10px;
+        justify-content: center;
+        max-width: 500px;
+      }
+
+      .row {
+        gap: 220px;
       }
     }
   }
@@ -88,7 +97,7 @@
       }
 
       .row {
-        gap: 220px;
+        gap: 160px;
       }
     }
   }
