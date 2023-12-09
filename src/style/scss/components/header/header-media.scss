@@ -8,6 +8,10 @@
       flex-direction: column;
       align-items: stretch;
     }
+
+    &__menu {
+      gap: 50px;
+    }
   }
 
   @include br4-screen {

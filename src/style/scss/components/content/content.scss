@@ -12,7 +12,7 @@
       flex-direction: column;
       gap: 50px;
       justify-content: flex-start;
-      max-width: 400px;
+      max-width: 30%;
 
       a {
         color: $color-dark-blue;
@@ -20,6 +20,8 @@
     }
 
     &__right {
+      flex-wrap: nowrap;
+      max-width: 60%;
       gap: 30px;
     }
 
@@ -27,7 +29,6 @@
       @extend %image;
 
       width: 460px;
-      //max-width: 100%;
       height: 365px;
       @include images("./../../assets/pictures/img/infographic.png");
     }
@@ -36,7 +37,7 @@
       display: inline-flex;
       flex-direction: column;
       gap: 30px;
-      max-width: 200px;
+      max-width: 30%;
     }
 
     &__values-description {

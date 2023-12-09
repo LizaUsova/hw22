@@ -2,34 +2,34 @@
 
 .banner {
 
-  position: relative;
-
-  height: 100vh;
-  padding-top: 200px;
-
   @include images ("./../../assets/pictures/img/bg.jpg");
 
+  position: relative;
+
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100vh;
+  min-height: 750px;
+
   &::after {
+
+    @include images ("./../../assets/pictures/icons_svg/dot_ornament.svg");
+
     content: '';
 
     position: absolute;
-    top: calc(100vh - 78px);
     right: 0;
-    z-index: 2;
+    bottom: -78px;
 
     display: block;
 
     width: 400px;
     height: 153px;
-
-    @include images ("./../../assets/pictures/icons_svg/dot_ornament.svg");
   }
 
   &__inner {
     max-width: 640px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
   }
 
   &__title {

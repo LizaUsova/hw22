@@ -119,6 +119,7 @@ body {
   font-size: 18px; }
 
 .container {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px; }
@@ -212,7 +213,9 @@ form {
 @media (max-width: 576px) {
   .header__navigation {
     flex-direction: column;
-    align-items: stretch; } }
+    align-items: stretch; }
+  .header__menu {
+    gap: 50px; } }
 @media (max-width: 480px) {
   .header__navigation {
     flex-flow: column nowrap;
@@ -224,25 +227,23 @@ form {
 
 @use './../../common/variables' as *;
 .banner {
+  background-image: url("./../../assets/pictures/img/bg.jpg");
   position: relative;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
-  padding-top: 200px;
-  background-image: url("./../../assets/pictures/img/bg.jpg"); }
+  min-height: 750px; }
   .banner::after {
+    background-image: url("./../../assets/pictures/icons_svg/dot_ornament.svg");
     content: '';
     position: absolute;
-    top: calc(100vh - 78px);
     right: 0;
-    z-index: 2;
+    bottom: -78px;
     display: block;
     width: 400px;
-    height: 153px;
-    background-image: url("./../../assets/pictures/icons_svg/dot_ornament.svg"); }
+    height: 153px; }
   .banner__inner {
-    max-width: 640px;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center; }
+    max-width: 640px; }
   .banner__title {
     gap: 30px; }
     .banner__title h1 {
@@ -266,30 +267,19 @@ form {
   .banner__inner {
     max-width: 400px; }
   .banner__title h1 {
-    max-width: 350px;
     font-size: 40px; } }
 @media (max-width: 576px) {
   .banner {
-    padding-top: 160px; }
+    justify-content: center; }
     .banner__inner {
-      max-width: 500px; }
-    .banner__title {
-      justify-content: center; }
-      .banner__title h1 {
-        max-width: 400px;
-        margin-bottom: 10px;
-        font-size: 30px; } }
+      max-width: 100%; }
+    .banner h1 {
+      margin-bottom: 10px;
+      font-size: 52px; } }
 @media (max-width: 480px) {
-  .banner {
-    padding-top: 160px; }
-    .banner__inner {
-      max-width: 500px; }
-    .banner__title {
-      justify-content: center; }
-      .banner__title h1 {
-        max-width: 400px;
-        margin-bottom: 10px;
-        font-size: 30px; } }
+  .banner h1 {
+    margin-bottom: 10px;
+    font-size: 45px; } }
 
 @use './../../common/variables' as *;
 @use './../../common/extends' as *;
@@ -302,10 +292,12 @@ form {
       flex-direction: column;
       gap: 50px;
       justify-content: flex-start;
-      max-width: 400px; }
+      max-width: 30%; }
       .content .content-block__left a {
         color: #2EACF3; }
     .content .content-block__right {
+      flex-wrap: nowrap;
+      max-width: 60%;
       gap: 30px; }
     .content .content-block__graphic {
       width: 460px;
@@ -315,7 +307,7 @@ form {
       display: inline-flex;
       flex-direction: column;
       gap: 30px;
-      max-width: 200px; }
+      max-width: 30%; }
     .content .content-block__values-description {
       font-size: 16px;
       color: #000; }
@@ -345,33 +337,40 @@ form {
       justify-content: center; }
       .content .content-block__left {
         gap: 30px;
-        min-width: 954px; }
+        max-width: 100%; }
       .content .content-block__right {
-        gap: 140px; }
+        gap: 90px;
+        max-width: 100%; }
       .content .content-block__graphic {
-        width: 500px; } }
+        width: 460px; } }
 @media (max-width: 767px) {
   .content {
     padding-top: 90px; }
     .content .content-block__left {
       gap: 30px;
-      min-width: 730px; }
+      max-width: 100%; }
     .content .content-block__right {
-      gap: 90px; }
+      flex-wrap: wrap;
+      gap: 90px;
+      justify-content: center; }
     .content .content-block__graphic {
-      width: 400px; } }
+      width: 460px; }
+    .content .content-block__values {
+      gap: 10px;
+      justify-content: center;
+      max-width: 100%; } }
 @media (max-width: 576px) {
   .content {
     padding-top: 90px;
     padding-bottom: 80px; }
     .content .content-block__left {
       gap: 30px;
-      min-width: 520px; }
+      max-width: 100%; }
     .content .content-block__right {
-      gap: 60px;
+      gap: 20px;
       justify-content: center; }
     .content .content-block__graphic {
-      width: 500px; }
+      width: 100%; }
     .content .content-block__values {
       gap: 10px;
       justify-content: center;
@@ -384,11 +383,11 @@ form {
     padding-bottom: 50px; }
     .content .content-block__left {
       gap: 30px;
-      min-width: 450px; }
+      max-width: 100%; }
     .content .content-block__right {
       gap: 40px; }
     .content .content-block__graphic {
-      width: 450px; }
+      width: 100%; }
     .content .content-block__values {
       gap: 40px; }
     .content .content-block .row {
@@ -406,7 +405,7 @@ form {
   .instruction__cards {
     gap: 40px; }
   .instruction__card {
-    max-width: 363px;
+    max-width: 30%;
     min-height: 332px;
     padding: 35px 65px 45px 30px;
     background-color: #fff;
@@ -424,6 +423,7 @@ form {
         background-color: #8E85F4;
         border-radius: 6px; }
     .instruction__card-row {
+      display: flex;
       gap: 15px;
       align-items: center;
       justify-content: flex-start; }
@@ -452,21 +452,25 @@ form {
     padding-top: 100px;
     padding-bottom: 100px; }
     .instruction__card {
-      max-width: 290px;
-      padding-right: 35px;
-      padding-left: 35px; } }
+      padding-right: 20px;
+      padding-left: 30px; }
+    .instruction__cards {
+      gap: 20px; } }
 @media (max-width: 767px) {
   .instruction {
     padding-top: 90px; }
     .instruction__card {
       max-width: 775px;
       min-height: 250px;
-      padding-right: 35px;
-      padding-left: 35px; }
+      padding-right: 30px;
+      padding-left: 30px; }
       .instruction__card-icons {
         flex-direction: row;
         gap: 72px;
-        align-items: center; } }
+        align-items: center; }
+    .instruction__clicking {
+      gap: 40px;
+      justify-content: center; } }
 @media (max-width: 576px) {
   .instruction {
     padding-top: 80px; }
@@ -524,15 +528,27 @@ form {
 
 @use './../../common/media-mixin' as *;
 @use './../../common/variables' as *;
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .footer {
     padding: 50px 0; }
     .footer__left {
       gap: 30px;
       max-width: 250px; } }
+@media (max-width: 767px) {
+  .footer {
+    padding: 50px 0; }
+    .footer .f-content {
+      justify-content: center; }
+    .footer__left {
+      gap: 30px;
+      max-width: 100%; }
+    .footer__right {
+      margin-top: 20px; } }
 @media (max-width: 576px) {
   .footer {
     padding: 50px 0; }
+    .footer .f-content {
+      justify-content: center; }
     .footer__left {
       gap: 30px;
       max-width: 500px; }

@@ -16,7 +16,7 @@
   }
 
   &__card {
-    max-width: 363px;
+    max-width: 30%;
     min-height: 332px;
     padding: 35px 65px 45px 30px;
 
@@ -43,6 +43,7 @@
     }
 
     &-row {
+      display: flex;
       gap: 15px;
       align-items: center;
       justify-content: flex-start;
